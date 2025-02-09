@@ -4,14 +4,14 @@ TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
   fontSize: 16
-  forceTextureCase: -2
+  forceTextureCase: 3
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
   - Frenchpress
   fallbackFontReferences: []
-  customCharacters: 
+  customCharacters: "\xE0 \xE9\xE8\xEA\xEB\xEE\xEF\xF4\xF9\xE7"
   fontRenderingMode: 0
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0

@@ -1,16 +1,17 @@
 fileFormatVersion: 2
-guid: 6ccd90da43756324ca0ce4b3afe66414
+guid: 0711909f63cf36d418133a171a104543
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
   fontSize: 16
-  forceTextureCase: -1
+  forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Le French
-  fallbackFontReferences: []
+  - Caviar Dreams
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2008ced77c73c2a429bd13f6bd9c8726, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
