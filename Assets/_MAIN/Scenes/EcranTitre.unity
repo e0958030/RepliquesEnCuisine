@@ -1495,7 +1495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 1189426241}
-  sceneSuivante: 
+  sceneSuivante: Avis
 --- !u!1 &1473019771
 GameObject:
   m_ObjectHideFlags: 0

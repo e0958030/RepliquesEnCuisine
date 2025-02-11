@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class BoutonChangeScene : MonoBehaviour
 {
-    /////// Déclaration des variables ///////
+    /////// Dï¿½claration des variables ///////
     public AudioSource audio;
-    public string sceneSuivante; // Nom de la scène à charger
+    public string sceneSuivante; // Nom de la scï¿½ne ï¿½ charger
 
     public void boutonSuivant()
     {
@@ -23,14 +23,14 @@ public class BoutonChangeScene : MonoBehaviour
 
     private IEnumerator AttendreEtChangerScene()
     {
-        //Attendre la durée du son 
+        //Attendre la durï¿½e du son 
         yield return new WaitForSeconds(audio.clip.length/2);
         ChangerScene();
     }
 
     private void ChangerScene()
     {
-        SceneManager.LoadScene("Avis");
+        SceneManager.LoadScene(sceneSuivante);
     }
 }
 

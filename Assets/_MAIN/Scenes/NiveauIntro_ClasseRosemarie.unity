@@ -2437,7 +2437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "le texte sera affich\xE9 ici"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 592dae1e11a2dc24a94c7777fb482200, type: 2}
   m_sharedMaterial: {fileID: -5928580493262865518, guid: 592dae1e11a2dc24a94c7777fb482200,
@@ -2529,6 +2529,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textMeshPro: {fileID: 1579254497}
   stringArray:
+  - "Oh dear\u2026 I barely understood anything."
+  - My head hurts. Perhaps I should have learned French before coming here.
   - "Salut ! Tu t\u2019appelles Ember, c\u2019est bien \xE7a ? Je m\u2019appelle
     Rosemarie, enchant\xE9e !"
   - Oh, um.. Bonjour. Oui.

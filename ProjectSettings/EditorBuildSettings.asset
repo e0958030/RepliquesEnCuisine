@@ -14,4 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_MAIN/Scenes/NiveauIntro_Gare.unity
     guid: 02b056c87dbdb864b900729c3d49d801
+  - enabled: 1
+    path: Assets/_MAIN/Scenes/NiveauIntro_MapVille.unity
+    guid: ba4359965e00ece45bff44638610ba2e
+  - enabled: 1
+    path: Assets/_MAIN/Scenes/NiveauIntro_Appart.unity
+    guid: d28d6ae721b92cb409f9b4f7e7a2ee16
+  - enabled: 1
+    path: Assets/_MAIN/Scenes/NiveauIntro_ClasseRoger.unity
+    guid: e61896c0dffd5b948b52781246decc29
+  - enabled: 1
+    path: Assets/_MAIN/Scenes/NiveauIntro_ClasseRosemarie.unity
+    guid: 31de24917ae85e84fafc532ba799064d
   m_configObjects: {}
