@@ -158,10 +158,10 @@ RectTransform:
   m_Father: {fileID: 302789158}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 368.22504, y: -13.87}
+  m_SizeDelta: {x: 66.950005, y: 27.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &65962230
 MonoBehaviour:
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 18c3c4ae045a65846aae7c147361dcba, type: 3}
+  m_Texture: {fileID: 2800000, guid: d8f1b4b30a0cf944d87c551302fc9143, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -353,7 +353,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -519.2, y: -241}
+  m_AnchoredPosition: {x: -471.25, y: -241}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &172001108
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Rosemarie '
+  m_text: Ember
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 592dae1e11a2dc24a94c7777fb482200, type: 2}
   m_sharedMaterial: {fileID: -5928580493262865518, guid: 592dae1e11a2dc24a94c7777fb482200,
@@ -515,7 +515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &253985757
 RectTransform:
   m_ObjectHideFlags: 0
@@ -587,7 +587,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 155.2, y: 15.800003}
+  m_AnchoredPosition: {x: 155.20001, y: 15.799988}
   m_SizeDelta: {x: -319.3, y: 27.74}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &302789159
@@ -689,10 +689,10 @@ RectTransform:
   m_Father: {fileID: 302789158}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 234.32501, y: -13.87}
+  m_SizeDelta: {x: 66.950005, y: 27.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &327718794
 MonoBehaviour:
@@ -964,10 +964,10 @@ RectTransform:
   m_Father: {fileID: 302789158}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100.425, y: -13.87}
+  m_SizeDelta: {x: 66.950005, y: 27.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &406548246
 MonoBehaviour:
@@ -1086,10 +1086,10 @@ RectTransform:
   m_Father: {fileID: 302789158}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 167.37502, y: -13.87}
+  m_SizeDelta: {x: 66.950005, y: 27.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &428750063
 MonoBehaviour:
@@ -1332,7 +1332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &501073904
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1410,10 +1410,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1580,10 +1580,10 @@ RectTransform:
   m_Father: {fileID: 302789158}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 33.475006, y: -13.87}
+  m_SizeDelta: {x: 66.950005, y: 27.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1050625343
 MonoBehaviour:
@@ -2291,10 +2291,10 @@ RectTransform:
   m_Father: {fileID: 302789158}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 301.27502, y: -13.87}
+  m_SizeDelta: {x: 66.950005, y: 27.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1503970965
 MonoBehaviour:
@@ -2389,6 +2389,7 @@ GameObject:
   - component: {fileID: 1579254496}
   - component: {fileID: 1579254498}
   - component: {fileID: 1579254497}
+  - component: {fileID: 1579254499}
   m_Layer: 5
   m_Name: TMP_Dialogue
   m_TagString: Untagged
@@ -2436,7 +2437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "le texte sera affich\xE9 ici"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 592dae1e11a2dc24a94c7777fb482200, type: 2}
   m_sharedMaterial: {fileID: -5928580493262865518, guid: 592dae1e11a2dc24a94c7777fb482200,
@@ -2514,6 +2515,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579254495}
   m_CullTransparentMesh: 1
+--- !u!114 &1579254499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579254495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4342d3eb8da2b84faa1cde81cb3dec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textMeshPro: {fileID: 0}
+  stringArray:
+  - "I finally made it! After 8 long hours\u2026"
+  - My life as a culinary student starts now!
+  - "Now then, let\u2019s get out of the station and go to my new apartment. "
+  tempsEntreLettres: 0.1
+  tempsEntreMots: 1
 --- !u!1 &1598838889
 GameObject:
   m_ObjectHideFlags: 0
@@ -2994,7 +3014,7 @@ RectTransform:
   m_GameObject: {fileID: 1824495069}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.37, y: 0.37, z: 0.37}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 172001107}
