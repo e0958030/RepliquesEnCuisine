@@ -1906,10 +1906,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomSceneAppart: NiveauIntro_Appart
-  sonClic: {fileID: 0}
+  sonClic: {fileID: 8300000, guid: 19db8a553724db24bb6ab263700e6e33, type: 3}
   appartement: {fileID: 383860044}
   gare: {fileID: 0}
-  ecole: {fileID: 321137032}
+  ecole: {fileID: 0}
   epicerie: {fileID: 0}
   cafe: {fileID: 0}
 --- !u!1 &832575517
