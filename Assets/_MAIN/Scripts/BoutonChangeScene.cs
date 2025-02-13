@@ -7,6 +7,7 @@ public class BoutonChangeScene : MonoBehaviour
     /////// D�claration des variables ///////
     public AudioSource audio;
     public string sceneSuivante; // Nom de la sc�ne � charger
+    public string sceneCredits; //Pour la scene des credits
 
     public void boutonSuivant()
     {
