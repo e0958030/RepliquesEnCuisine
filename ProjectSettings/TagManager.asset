@@ -7,6 +7,11 @@ TagManager:
   - Oeufs
   - Creme
   - Epinards
+  - Ecole
+  - Appart
+  - Epicerie
+  - Gare
+  - SelPoivre
   layers:
   - Default
   - TransparentFX

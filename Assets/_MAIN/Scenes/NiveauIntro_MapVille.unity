@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 147859411}
   m_Layer: 0
   m_Name: ModeleGare
-  m_TagString: Untagged
+  m_TagString: Gare
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 321137034}
   m_Layer: 0
   m_Name: ModeleAppart
-  m_TagString: Untagged
+  m_TagString: Appart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1404,7 +1404,7 @@ GameObject:
   - component: {fileID: 383860050}
   m_Layer: 0
   m_Name: ModeleEcole
-  m_TagString: Untagged
+  m_TagString: Ecole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2360,7 +2360,7 @@ GameObject:
   - component: {fileID: 920075097}
   m_Layer: 0
   m_Name: ModeleEpicerie
-  m_TagString: Untagged
+  m_TagString: Epicerie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
