@@ -12,6 +12,8 @@ TagManager:
   - Epicerie
   - Gare
   - SelPoivre
+  - Farine
+  - Beurre
   layers:
   - Default
   - TransparentFX
