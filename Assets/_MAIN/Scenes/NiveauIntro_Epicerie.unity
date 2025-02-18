@@ -1682,8 +1682,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 218f6925d5063f740b9b1cf02cd2c7a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonMauvaisItem: {fileID: 0}
-  sonBonItem: {fileID: 0}
+  sonMauvaisItem: {fileID: 8300000, guid: c6826e2abaf6a184ea64cdb56c2d78a9, type: 3}
+  sonBonItem: {fileID: 8300000, guid: c16e9f240b51ea141aad4537e4187633, type: 3}
   sonEpinards: {fileID: 0}
   sonOeufs: {fileID: 0}
   sonCreme: {fileID: 0}
@@ -3065,8 +3065,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 218f6925d5063f740b9b1cf02cd2c7a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonMauvaisItem: {fileID: 0}
-  sonBonItem: {fileID: 0}
+  sonMauvaisItem: {fileID: 8300000, guid: c6826e2abaf6a184ea64cdb56c2d78a9, type: 3}
+  sonBonItem: {fileID: 8300000, guid: c16e9f240b51ea141aad4537e4187633, type: 3}
   sonEpinards: {fileID: 0}
   sonOeufs: {fileID: 0}
   sonCreme: {fileID: 0}
@@ -3933,8 +3933,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 218f6925d5063f740b9b1cf02cd2c7a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonMauvaisItem: {fileID: 0}
-  sonBonItem: {fileID: 0}
+  sonMauvaisItem: {fileID: 8300000, guid: c6826e2abaf6a184ea64cdb56c2d78a9, type: 3}
+  sonBonItem: {fileID: 8300000, guid: c16e9f240b51ea141aad4537e4187633, type: 3}
   sonEpinards: {fileID: 0}
   sonOeufs: {fileID: 0}
   sonCreme: {fileID: 0}
@@ -5006,8 +5006,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 218f6925d5063f740b9b1cf02cd2c7a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonMauvaisItem: {fileID: 0}
-  sonBonItem: {fileID: 0}
+  sonMauvaisItem: {fileID: 8300000, guid: c6826e2abaf6a184ea64cdb56c2d78a9, type: 3}
+  sonBonItem: {fileID: 8300000, guid: c16e9f240b51ea141aad4537e4187633, type: 3}
   sonEpinards: {fileID: 0}
   sonOeufs: {fileID: 0}
   sonCreme: {fileID: 0}
@@ -5035,7 +5035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomSceneAppart: 
-  sonClic: {fileID: 8300000, guid: 19db8a553724db24bb6ab263700e6e33, type: 3}
+  sonClic: {fileID: 0}
   appartement: {fileID: 0}
   gare: {fileID: 0}
   ecole: {fileID: 0}
@@ -5470,8 +5470,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sonMauvaisItem: {fileID: 8300000, guid: c6826e2abaf6a184ea64cdb56c2d78a9, type: 3}
   sonBonItem: {fileID: 8300000, guid: c16e9f240b51ea141aad4537e4187633, type: 3}
-  sonEpinards: {fileID: 8300000, guid: c6826e2abaf6a184ea64cdb56c2d78a9, type: 3}
-  sonOeufs: {fileID: 8300000, guid: c6826e2abaf6a184ea64cdb56c2d78a9, type: 3}
+  sonEpinards: {fileID: 0}
+  sonOeufs: {fileID: 0}
   sonCreme: {fileID: 0}
   sonFarine: {fileID: 0}
   sonBeurre: {fileID: 0}
@@ -5884,6 +5884,7 @@ GameObject:
   - component: {fileID: 1939825651}
   - component: {fileID: 1939825650}
   - component: {fileID: 1939825653}
+  - component: {fileID: 1939825654}
   m_Layer: 0
   m_Name: SelPoivre (1)
   m_TagString: SelPoivre
@@ -5988,6 +5989,39 @@ MonoBehaviour:
   ecole: {fileID: 0}
   epicerie: {fileID: 0}
   cafe: {fileID: 0}
+--- !u!114 &1939825654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939825648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218f6925d5063f740b9b1cf02cd2c7a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonMauvaisItem: {fileID: 8300000, guid: c6826e2abaf6a184ea64cdb56c2d78a9, type: 3}
+  sonBonItem: {fileID: 8300000, guid: c16e9f240b51ea141aad4537e4187633, type: 3}
+  sonEpinards: {fileID: 0}
+  sonOeufs: {fileID: 0}
+  sonCreme: {fileID: 0}
+  sonFarine: {fileID: 0}
+  sonBeurre: {fileID: 0}
+  sonTomate: {fileID: 0}
+  sonSelPoivre: {fileID: 0}
+  sonCitrouille: {fileID: 0}
+  sonFromage: {fileID: 0}
+  tagsObjets:
+  - Epinards
+  - Oeufs
+  - Creme
+  - Farine
+  - Beurre
+  - Tomate
+  - SelPoivre
+  - Citrouille
+  - Fromage
 --- !u!1 &2055268575
 GameObject:
   m_ObjectHideFlags: 0

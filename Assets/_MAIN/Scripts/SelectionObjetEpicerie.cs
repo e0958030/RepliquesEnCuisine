@@ -39,7 +39,7 @@ public class SelectionObjetEpicerie : MonoBehaviour
 
         //Associer chaque tag à son AudioClip avec le dictionnaire
         sonsParTag = new Dictionary<string, AudioClip>
-        {   
+        {
             { "Epinards", sonEpinards },
             { "Oeufs", sonOeufs },
             { "Creme", sonCreme },
@@ -48,7 +48,7 @@ public class SelectionObjetEpicerie : MonoBehaviour
             { "Tomate", sonTomate },
             { "SelPoivre", sonSelPoivre },
             { "Citrouille", sonCitrouille },
-            { "Fromage", sonFromage }                    
+            { "Fromage", sonFromage }
         };
     }
 
@@ -61,27 +61,48 @@ public class SelectionObjetEpicerie : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if (tagsObjets.Contains(hit.collider.tag)) // Vérifie si le tag est dans la liste
+                string tagObjet = hit.collider.tag;
+
+                if (tagsObjets.Contains(tagObjet)) // Vérifie si le tag est dans la liste
                 {
                     Destroy(hit.collider.gameObject);
+                    if (sonBonItem != null)
+                    {
+                        audioSource.PlayOneShot(sonBonItem);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("sonBonItem n'est pas assigné !");
+                    }
                 }
-            }           
-        }
-
-        // Détection du survol de la souris
-        //Joue le son correspondant si le
-        Ray raySurvol = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hitSurvol;
-
-        if (Physics.Raycast(raySurvol, out hitSurvol))
-        {
-            string tagSurvole = hitSurvol.collider.tag;
-
-            if (sonsParTag.ContainsKey(tagSurvole))
-            {
-                if (!audioSource.isPlaying)
+                else
                 {
-                    audioSource.PlayOneShot(sonsParTag[tagSurvole]);
+                    if (sonMauvaisItem != null)
+                    {
+                        audioSource.PlayOneShot(sonMauvaisItem);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("sonMauvaisItem n'est pas assigné !");
+                    }
+                }
+            }
+
+            // Détection du survol de la souris
+            //Joue le son correspondant si le
+            Ray raySurvol = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitSurvol;
+
+            if (Physics.Raycast(raySurvol, out hitSurvol))
+            {
+                string tagSurvole = hitSurvol.collider.tag;
+
+                if (sonsParTag.ContainsKey(tagSurvole))
+                {
+                    if (!audioSource.isPlaying)
+                    {
+                        audioSource.PlayOneShot(sonsParTag[tagSurvole]);
+                    }
                 }
             }
         }

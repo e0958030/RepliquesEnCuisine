@@ -40,7 +40,7 @@ public class CliquerObjet3D : MonoBehaviour
                 // Jouer le son du clic
                 if (audioSource && sonClic)
                 {
-                    audioSource.PlayOneShot(sonClic);
+                    //audioSource.PlayOneShot(sonClic);
                 }
 
                 // Démarrer la coroutine pour attendre avant de changer de scène
