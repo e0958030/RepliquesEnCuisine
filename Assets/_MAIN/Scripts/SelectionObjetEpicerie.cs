@@ -70,10 +70,10 @@ public class SelectionObjetEpicerie : MonoBehaviour
                     {
                         audioSource.PlayOneShot(sonBonItem);
                     }
-                    else
-                    {
-                        Debug.LogWarning("sonBonItem n'est pas assigné !");
-                    }
+                    //else
+                    //{
+                    //    Debug.LogWarning("sonBonItem n'est pas assigné !");
+                    //}
                 }
                 else
                 {
@@ -81,15 +81,15 @@ public class SelectionObjetEpicerie : MonoBehaviour
                     {
                         audioSource.PlayOneShot(sonMauvaisItem);
                     }
-                    else
-                    {
-                        Debug.LogWarning("sonMauvaisItem n'est pas assigné !");
-                    }
+                    //else
+                    //{
+                    //    Debug.LogWarning("sonMauvaisItem n'est pas assigné !");
+                    //}
                 }
             }
 
             // Détection du survol de la souris
-            //Joue le son correspondant si le
+            //Joue le son correspondant à l'item
             Ray raySurvol = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitSurvol;
 
