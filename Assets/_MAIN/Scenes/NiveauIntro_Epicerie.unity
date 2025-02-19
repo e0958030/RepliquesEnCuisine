@@ -454,12 +454,147 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172001106}
   m_CullTransparentMesh: 1
+--- !u!1 &190764622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cf08d4dadee83a848b16e6551907355a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1143872607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &190764625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cf08d4dadee83a848b16e6551907355a,
     type: 3}
   m_PrefabInstance: {fileID: 1143872607}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &190764626
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190764622}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &190764627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190764622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218f6925d5063f740b9b1cf02cd2c7a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonMauvaisItem: {fileID: 0}
+  sonBonItem: {fileID: 0}
+  sonEpinards: {fileID: 0}
+  sonOeufs: {fileID: 0}
+  sonCreme: {fileID: 0}
+  sonFarine: {fileID: 0}
+  sonBeurre: {fileID: 0}
+  sonTomate: {fileID: 8300000, guid: ab902992d3ce62f408435724256fb3de, type: 3}
+  sonSelPoivre: {fileID: 0}
+  sonCitrouille: {fileID: 0}
+  sonFromage: {fileID: 0}
+  tagsObjets:
+  - Epinards
+  - Oeufs
+  - Creme
+  - Farine
+  - Beurre
+  - Tomate
+  - SelPoivre
+  - Citrouille
+  - Fromage
 --- !u!1 &250841230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,7 +1827,7 @@ MonoBehaviour:
   sonBonItem: {fileID: 8300000, guid: c16e9f240b51ea141aad4537e4187633, type: 3}
   sonEpinards: {fileID: 0}
   sonOeufs: {fileID: 0}
-  sonCreme: {fileID: 0}
+  sonCreme: {fileID: 8300000, guid: dafc79b75358b0245ba78a714b466b0c, type: 3}
   sonFarine: {fileID: 0}
   sonBeurre: {fileID: 0}
   sonTomate: {fileID: 0}
@@ -3836,6 +3971,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TomateModele
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cf08d4dadee83a848b16e6551907355a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tomate
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf08d4dadee83a848b16e6551907355a, type: 3}
 --- !u!1 &1185987414
@@ -4543,7 +4683,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ab902992d3ce62f408435724256fb3de, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
