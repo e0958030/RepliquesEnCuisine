@@ -54,6 +54,7 @@ public class SelectionObjetEpicerie : MonoBehaviour
 
     void Update()
     {
+        // Détection du clic de la souris
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -63,17 +64,13 @@ public class SelectionObjetEpicerie : MonoBehaviour
             {
                 string tagObjet = hit.collider.tag;
 
-                if (tagsObjets.Contains(tagObjet)) // Vérifie si le tag est dans la liste
+                if (tagsObjets.Contains(tagObjet)) // Vérifie si l'objet appartient à la liste
                 {
                     Destroy(hit.collider.gameObject);
                     if (sonBonItem != null)
                     {
                         audioSource.PlayOneShot(sonBonItem);
                     }
-                    //else
-                    //{
-                    //    Debug.LogWarning("sonBonItem n'est pas assigné !");
-                    //}
                 }
                 else
                 {
@@ -81,28 +78,23 @@ public class SelectionObjetEpicerie : MonoBehaviour
                     {
                         audioSource.PlayOneShot(sonMauvaisItem);
                     }
-                    //else
-                    //{
-                    //    Debug.LogWarning("sonMauvaisItem n'est pas assigné !");
-                    //}
                 }
             }
+        }
 
-            // Détection du survol de la souris
-            //Joue le son correspondant à l'item
-            Ray raySurvol = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitSurvol;
+        // Détection du survol de la souris (toujours actif dans Update)
+        Ray raySurvol = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hitSurvol;
 
-            if (Physics.Raycast(raySurvol, out hitSurvol))
+        if (Physics.Raycast(raySurvol, out hitSurvol))
+        {
+            string tagSurvole = hitSurvol.collider.tag;
+
+            if (sonsParTag.ContainsKey(tagSurvole))
             {
-                string tagSurvole = hitSurvol.collider.tag;
-
-                if (sonsParTag.ContainsKey(tagSurvole))
+                if (!audioSource.isPlaying) // Joue le son uniquement si rien n'est en train de jouer
                 {
-                    if (!audioSource.isPlaying)
-                    {
-                        audioSource.PlayOneShot(sonsParTag[tagSurvole]);
-                    }
+                    audioSource.PlayOneShot(sonsParTag[tagSurvole]);
                 }
             }
         }
