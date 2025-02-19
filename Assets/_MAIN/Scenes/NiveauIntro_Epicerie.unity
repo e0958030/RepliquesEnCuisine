@@ -595,6 +595,25 @@ MonoBehaviour:
   - SelPoivre
   - Citrouille
   - Fromage
+--- !u!114 &190764628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190764622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6647fbcb514322459376befaf8f8809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomSceneAppart: 
+  sonClic: {fileID: 0}
+  appartement: {fileID: 0}
+  gare: {fileID: 0}
+  ecole: {fileID: 0}
+  epicerie: {fileID: 0}
+  cafe: {fileID: 0}
 --- !u!1 &250841230
 GameObject:
   m_ObjectHideFlags: 0
@@ -2850,7 +2869,7 @@ GameObject:
   - component: {fileID: 868335861}
   m_Layer: 5
   m_Name: Tomate
-  m_TagString: Untagged
+  m_TagString: Tomate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3103,7 +3122,7 @@ GameObject:
   - component: {fileID: 965303843}
   m_Layer: 5
   m_Name: Citrouille
-  m_TagString: Untagged
+  m_TagString: Citrouille
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4659,7 +4678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sonMauvaisItem: {fileID: 8300000, guid: c6826e2abaf6a184ea64cdb56c2d78a9, type: 3}
   sonBonItem: {fileID: 8300000, guid: c16e9f240b51ea141aad4537e4187633, type: 3}
-  sonEpinards: {fileID: 8300000, guid: ab902992d3ce62f408435724256fb3de, type: 3}
+  sonEpinards: {fileID: 8300000, guid: 288fd8ab000281e4e83ac78033efc82c, type: 3}
   sonOeufs: {fileID: 0}
   sonCreme: {fileID: 0}
   sonFarine: {fileID: 0}
@@ -5949,7 +5968,7 @@ GameObject:
   - component: {fileID: 1702894649}
   m_Layer: 0
   m_Name: Citrouille
-  m_TagString: Untagged
+  m_TagString: Citrouille
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6088,7 +6107,7 @@ MonoBehaviour:
   sonBeurre: {fileID: 0}
   sonTomate: {fileID: 0}
   sonSelPoivre: {fileID: 0}
-  sonCitrouille: {fileID: 0}
+  sonCitrouille: {fileID: 8300000, guid: cb70e51e69d3f0f428cca39c0e6c4874, type: 3}
   sonFromage: {fileID: 0}
   tagsObjets:
   - Oeufs
@@ -6194,7 +6213,7 @@ GameObject:
   - component: {fileID: 1713047227}
   m_Layer: 0
   m_Name: Tomate
-  m_TagString: Untagged
+  m_TagString: Tomate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6939,7 +6958,7 @@ MonoBehaviour:
   sonMauvaisItem: {fileID: 8300000, guid: c6826e2abaf6a184ea64cdb56c2d78a9, type: 3}
   sonBonItem: {fileID: 8300000, guid: c16e9f240b51ea141aad4537e4187633, type: 3}
   sonEpinards: {fileID: 0}
-  sonOeufs: {fileID: 0}
+  sonOeufs: {fileID: 8300000, guid: cfd4bb1054572694fb4b57778d7c6fde, type: 3}
   sonCreme: {fileID: 0}
   sonFarine: {fileID: 0}
   sonBeurre: {fileID: 0}
@@ -7913,7 +7932,7 @@ MonoBehaviour:
   sonOeufs: {fileID: 0}
   sonCreme: {fileID: 0}
   sonFarine: {fileID: 0}
-  sonBeurre: {fileID: 0}
+  sonBeurre: {fileID: 8300000, guid: b33fc20749150e145aa29fff10a8ec17, type: 3}
   sonTomate: {fileID: 0}
   sonSelPoivre: {fileID: 0}
   sonCitrouille: {fileID: 0}
