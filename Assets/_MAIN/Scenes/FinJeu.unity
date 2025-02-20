@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
+  - component: {fileID: 330585549}
   m_Layer: 0
   m_Name: Camera - Main
   m_TagString: MainCamera
@@ -548,6 +549,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &330585549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae47da145f01cda418e6eac63837f464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quitButton: {fileID: 335177867}
 --- !u!1 &335177863
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +576,7 @@ GameObject:
   - component: {fileID: 335177867}
   - component: {fileID: 335177865}
   m_Layer: 5
-  m_Name: ButtonCredits
+  m_Name: ButtonQuitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1422,7 +1436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -359.6, y: -101.2}
+  m_AnchoredPosition: {x: 41.51, y: -101.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1473019773
@@ -1445,7 +1459,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xC0 suivre ..."
+  m_text: "Appuyez sur la touche d'\xE9chappement pour quitter le jeu."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 592dae1e11a2dc24a94c7777fb482200, type: 2}
   m_sharedMaterial: {fileID: -5928580493262865518, guid: 592dae1e11a2dc24a94c7777fb482200,

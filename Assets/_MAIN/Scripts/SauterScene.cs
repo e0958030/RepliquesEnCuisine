@@ -5,11 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SauterScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //Simple script pour changer de scène en appuyant la touche espace
 
     // Update is called once per frame
     void Update()

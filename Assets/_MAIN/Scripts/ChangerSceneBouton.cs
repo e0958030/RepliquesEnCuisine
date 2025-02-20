@@ -9,6 +9,9 @@ public class ChangerSceneBouton : MonoBehaviour, IPointerClickHandler
 {
     ////////// Déclaration des variables //////////
 
+    //Variable pour mettre le nom de la scène à changer
+    public string sceneACharger;
+
     // Musique et effets sonores
     private AudioSource audioSource;
     public AudioClip sonClicBouton; // Pour la rétroaction sur le clic de souris
@@ -51,6 +54,6 @@ public class ChangerSceneBouton : MonoBehaviour, IPointerClickHandler
     // Script pour le changement de scène sur un clic de bouton
     public void ChangeScene()
     {
-        SceneManager.LoadScene("Avis");
+        SceneManager.LoadScene(sceneACharger);
     }
 }
