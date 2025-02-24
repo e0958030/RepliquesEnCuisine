@@ -1090,7 +1090,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Musique : purple-planet.com\nTextures : Poly Haven et Poliigon\nPolice
-    de caract\xE8res :  Jovanny Lemonad sur Dafont.com"
+    de caract\xE8res :  Frenchpress de Jovanny Lemonad sur Dafont.com"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 592dae1e11a2dc24a94c7777fb482200, type: 2}
   m_sharedMaterial: {fileID: -5928580493262865518, guid: 592dae1e11a2dc24a94c7777fb482200,
