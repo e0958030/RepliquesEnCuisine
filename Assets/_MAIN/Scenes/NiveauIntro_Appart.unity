@@ -2681,8 +2681,8 @@ MonoBehaviour:
   stringArray:
   - Oh well, I didn't sleep too well, I was too nervous.
   - Here we go! First day of class.
-  - Now let's get out of here and go to Culinary Institute.
-  tempsEntreLettres: 0.1
+  - Now let's get out of here and go to the Culinary Institute.
+  tempsEntreLettres: 0.05
   tempsEntreMots: 1
 --- !u!1 &1598838889
 GameObject:

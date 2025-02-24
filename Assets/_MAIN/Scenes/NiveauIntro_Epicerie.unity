@@ -925,7 +925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.3, y: -3.2}
+  m_AnchoredPosition: {x: 12.17, y: -3.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &302861380
@@ -948,7 +948,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cr\xE8me"
+  m_text: JOUER UNE SEULE FOIS LE SON
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 592dae1e11a2dc24a94c7777fb482200, type: 2}
   m_sharedMaterial: {fileID: -5928580493262865518, guid: 592dae1e11a2dc24a94c7777fb482200,
@@ -5096,14 +5096,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505758715}
-  m_LocalRotation: {x: -0.8960596, y: 0.1954463, z: -0.06955639, w: -0.39247933}
+  m_LocalRotation: {x: -0.89626867, y: 0.1941411, z: -0.069474645, w: -0.39266396}
   m_LocalPosition: {x: 0, y: 0, z: 0.0082}
   m_LocalScale: {x: 0.009355392, y: 0.009355131, z: 0.009355549}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1702894648}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 133.043, y: 2.3450012, z: 25.462997}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.1174, y: -0.0124}
@@ -5456,7 +5456,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 2
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -5516,7 +5516,7 @@ MonoBehaviour:
   stringArray:
   - Okay, I'm at the grocery store.
   - I need to get all the items from this list.
-  tempsEntreLettres: 0.1
+  tempsEntreLettres: 0.05
   tempsEntreMots: 1
 --- !u!1 &1582329772
 GameObject:
@@ -6166,7 +6166,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d20fc2970ec645249ac6eb82f270c179, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
