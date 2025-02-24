@@ -5,15 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SauterScene : MonoBehaviour
 {
-    //Simple script pour changer de scène en appuyant la touche espace
-
+    //Simple script pour changer de scï¿½ne en appuyant la touche espace
+    public string nomScene;
+    
     // Update is called once per frame
     void Update()
     {
-        //Passer la scène en appuyant sur la touche d'espacement
+        //Passer la scï¿½ne en appuyant sur la touche d'espacement
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("NiveauIntro_Gare");
+            SceneManager.LoadScene(nomScene);
         }
     }
 }
