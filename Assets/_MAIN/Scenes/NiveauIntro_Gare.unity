@@ -2453,7 +2453,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 2
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2511,7 +2511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textMeshPro: {fileID: 1579254497}
   stringArray:
-  - "I finally made it! After 8 long hours\u2026"
+  - "I finally made it to Roxbourg! After 8 long hours\u2026"
   - My life as a culinary student starts now!
   - "Now then, let\u2019s get out of the station, go home and get a good night sleep..."
   tempsEntreLettres: 0.1
