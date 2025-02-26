@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-//Script pour la sélection des objets de la liste d'épicerie
+// Script pour la sélection des objets de la liste d'épicerie
 public class SelectionObjetEpicerie : MonoBehaviour
 {
     /////////// Déclaration des variables pour les sons des items d'épicerie ///////////
     private AudioSource audioSource;
 
-    //Sons pour bon ou mauvais
+    // Sons pour bon ou mauvais
     public AudioClip sonMauvaisItem;
     public AudioClip sonBonItem;
 
-    //Items de la liste d'épicerie
+    // Items de la liste d'épicerie
     public AudioClip sonEpinards;
     public AudioClip sonOeufs;
     public AudioClip sonCreme;
@@ -26,21 +25,25 @@ public class SelectionObjetEpicerie : MonoBehaviour
 
     // Liste des tags des éléments de la liste d'épicerie
     // D'autres éléments seront rajoutés par la suite
-    public List<string> tagsObjets = new List<string> { "Epinards", "Oeufs", "Creme", "Farine", "Beurre", "Tomate", "SelPoivre", "Citrouille", "Fromage" };
+    public List<string> tagsObjets = new List<string>
+    { "Epinards", "Oeufs", "Creme", "Farine", "Beurre", "Tomate", "SelPoivre", "Citrouille", "Fromage" };
 
-    //Dictionnaire contenant les données de la liste d'épicerie et les associe à un son
-    //Évite de faire plusieurs conditions if
+    // Dictionnaire contenant les données de la liste d'épicerie et les associe à un son
+    // Évite de faire plusieurs conditions if
     private Dictionary<string, AudioClip> sonsParTag;
 
-    private string dernierObjetSurvole = "";
+    // Dictionnaire qui identifie si un objet est bon ou mauvais
+    private Dictionary<string, bool> objetsBonsOuMauvais;
 
+    // Pour mémoriser le dernier objet survolé afin d'éviter la répétition du son
+    private string dernierObjetSurvole = "";
 
     public void Start()
     {
-        //Déclencher l'AudioSource sur ouverture du jeu
+        // Déclencher l'AudioSource sur ouverture du jeu
         audioSource = GetComponent<AudioSource>();
 
-        //Associer chaque tag à son AudioClip avec le dictionnaire
+        // Associer chaque tag à son AudioClip avec le dictionnaire
         sonsParTag = new Dictionary<string, AudioClip>
         {
             { "Epinards", sonEpinards },
@@ -52,6 +55,20 @@ public class SelectionObjetEpicerie : MonoBehaviour
             { "SelPoivre", sonSelPoivre },
             { "Citrouille", sonCitrouille },
             { "Fromage", sonFromage }
+        };
+
+        // Définition des objets bons (true) et mauvais (false)
+        objetsBonsOuMauvais = new Dictionary<string, bool>
+        {
+            { "Epinards", true },   // Bon
+            { "Oeufs", true },      // Bon
+            { "Creme", true },     // Bon
+            { "Farine", true },    // Bon
+            { "Beurre", true },    // Bon
+            { "Tomate", false },     // Mauvais
+            { "SelPoivre", true },  // Bon
+            { "Citrouille", false },// Mauvais
+            { "Fromage", true }     // Bon
         };
     }
 
@@ -69,17 +86,22 @@ public class SelectionObjetEpicerie : MonoBehaviour
 
                 if (tagsObjets.Contains(tagObjet)) // Vérifie si l'objet appartient à la liste
                 {
-                    Destroy(hit.collider.gameObject);
-                    if (sonBonItem != null)
+                    Destroy(hit.collider.gameObject); // Détruit l'objet cliqué
+
+                    // Vérifie si l'objet est bon ou mauvais et joue le son correspondant
+                    if (objetsBonsOuMauvais.ContainsKey(tagObjet) && objetsBonsOuMauvais[tagObjet])
                     {
-                        audioSource.PlayOneShot(sonBonItem);
+                        if (sonBonItem != null)
+                        {
+                            audioSource.PlayOneShot(sonBonItem);
+                        }
                     }
-                }
-                else
-                {
-                    if (sonMauvaisItem != null)
+                    else
                     {
-                        audioSource.PlayOneShot(sonMauvaisItem);
+                        if (sonMauvaisItem != null)
+                        {
+                            audioSource.PlayOneShot(sonMauvaisItem);
+                        }
                     }
                 }
             }
@@ -93,12 +115,14 @@ public class SelectionObjetEpicerie : MonoBehaviour
         {
             string tagSurvole = hitSurvol.collider.tag;
 
-            if(sonsParTag.ContainsKey(tagSurvole) && tagSurvole != dernierObjetSurvole)
-{
+            // Condition if afin d'éviter que le son ne joue plusieurs fois d'affilée.
+            // Le dernier article survolé est mémorisé et le son ne sera rejoué que si le joueur
+            // survole un autre item et revient à celui-ci
+            if (sonsParTag.ContainsKey(tagSurvole) && tagSurvole != dernierObjetSurvole)
+            {
                 audioSource.PlayOneShot(sonsParTag[tagSurvole]);
                 dernierObjetSurvole = tagSurvole; // Met à jour l'objet actuellement survolé
             }
-
         }
     }
 }

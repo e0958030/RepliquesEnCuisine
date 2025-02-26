@@ -16,6 +16,7 @@ TagManager:
   - Beurre
   - Tomate
   - Citrouille
+  - Fromage
   layers:
   - Default
   - TransparentFX
