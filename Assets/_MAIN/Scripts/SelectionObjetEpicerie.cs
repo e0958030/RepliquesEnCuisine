@@ -32,6 +32,9 @@ public class SelectionObjetEpicerie : MonoBehaviour
     //Évite de faire plusieurs conditions if
     private Dictionary<string, AudioClip> sonsParTag;
 
+    private string dernierObjetSurvole = "";
+
+
     public void Start()
     {
         //Déclencher l'AudioSource sur ouverture du jeu
@@ -90,13 +93,12 @@ public class SelectionObjetEpicerie : MonoBehaviour
         {
             string tagSurvole = hitSurvol.collider.tag;
 
-            if (sonsParTag.ContainsKey(tagSurvole))
-            {
-                if (!audioSource.isPlaying) // Joue le son uniquement si rien n'est en train de jouer
-                {
-                    audioSource.PlayOneShot(sonsParTag[tagSurvole]);
-                }
+            if(sonsParTag.ContainsKey(tagSurvole) && tagSurvole != dernierObjetSurvole)
+{
+                audioSource.PlayOneShot(sonsParTag[tagSurvole]);
+                dernierObjetSurvole = tagSurvole; // Met à jour l'objet actuellement survolé
             }
+
         }
     }
 }
