@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/_MAIN/Scenes/NiveauIntro_Epicerie.unity
     guid: ae331295f11618a4c88d16e43c09f9e9
   - enabled: 1
-    path: Assets/_MAIN/Scenes/NiveauIntro_ClasseRoger _MiniTest.unity
+    path: Assets/_MAIN/Scenes/NiveauIntro_ClasseRoger_MiniTest.unity
     guid: 4ead6013451909f46b8350b67838e328
   - enabled: 1
     path: Assets/_MAIN/Scenes/FinJeu.unity
