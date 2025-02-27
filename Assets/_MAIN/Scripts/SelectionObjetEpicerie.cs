@@ -40,7 +40,6 @@ public class SelectionObjetEpicerie : MonoBehaviour
     private int totalBonsIngredients;
     private int bonsIngredientsRamasses = 0;
 
-
     // Pour mémoriser le dernier objet survolé afin d'éviter la répétition du son
     private string dernierObjetSurvole = "";
 
@@ -68,22 +67,22 @@ public class SelectionObjetEpicerie : MonoBehaviour
         // Sinon, s'il est false, le son de mauvais item sera joué
         objetsBonsOuMauvais = new Dictionary<string, bool>
         {
-            { "Epinards", true },   // Bon
-            { "Oeufs", true },      // Bon
-            { "Creme", true },     // Bon
-            { "Farine", true },    // Bon
-            { "Beurre", true },    // Bon
-            { "Tomate", false },     // Mauvais
-            { "SelPoivre", true },  // Bon
-            { "Citrouille", false },// Mauvais
-            { "Fromage", true }     // Bon
+            { "Epinards", true },
+            { "Oeufs", true },
+            { "Creme", true },
+            { "Farine", true },
+            { "Beurre", true },
+            { "Tomate", false },
+            { "SelPoivre", true },
+            { "Citrouille", false },
+            { "Fromage", true }
         };
 
         // Compter le nombre total d'ingrédients "bons" (true)
         totalBonsIngredients = 0;
         foreach (var item in objetsBonsOuMauvais)
         {
-            if (item.Value) // Si l'ingrédient est marqué "true"
+            if (item.Value)
             {
                 totalBonsIngredients++;
             }
@@ -106,12 +105,12 @@ public class SelectionObjetEpicerie : MonoBehaviour
 
                 if (tagsObjets.Contains(tagObjet)) // Vérifie si l'objet appartient à la liste du dictionnaire
                 {
-                    Destroy(hit.collider.gameObject); // Détruit l'objet cliqué
-
                     // Vérifie si l'objet est bon ou mauvais et joue le son correspondant
                     if (objetsBonsOuMauvais.ContainsKey(tagObjet) && objetsBonsOuMauvais[tagObjet])
                     {
                         bonsIngredientsRamasses++; // Incrémente le compteur des bons ingrédients
+
+                        Destroy(hit.collider.gameObject); // Détruit uniquement les objets bons
 
                         if (sonBonItem != null)
                         {
@@ -126,10 +125,13 @@ public class SelectionObjetEpicerie : MonoBehaviour
                     }
                     else
                     {
+                        // Les objets mauvais ne sont pas détruits mais jouent un son
                         if (sonMauvaisItem != null)
                         {
                             audioSource.PlayOneShot(sonMauvaisItem);
                         }
+
+                        Debug.Log("Mauvais ingrédient cliqué : " + tagObjet);
                     }
                 }
             }
@@ -154,11 +156,10 @@ public class SelectionObjetEpicerie : MonoBehaviour
         }
     }
 
-    //Une fois que tous les bons ingrédients sont ramassés, la scène de classe se charge
+    // Une fois que tous les bons ingrédients sont ramassés, la scène de classe se charge
     void ChargerSceneClasse()
     {
         Debug.Log("Tous les bons ingrédients ont été ramassés.");
-        SceneManager.LoadScene("NiveauIntro_ClasseRoger _MiniTest"); 
+        SceneManager.LoadScene("NiveauIntro_ClasseRoger_MiniTest");
     }
-
 }
