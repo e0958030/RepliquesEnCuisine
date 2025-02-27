@@ -59,20 +59,31 @@ public class JeuTraduction : MonoBehaviour
         questionTexte.text = questionCourante.phraseATraduire; // Afficher la phrase à traduire
         reponseText.text = ""; // Réinitialiser le texte du résultat
 
-        List<string> optionsMelangees = new List<string>(questionCourante.options);
-        optionsMelangees.Add(questionCourante.bonneReponse);
+        // Utiliser un HashSet pour garantir l'unicité des réponses
+        HashSet<string> optionsUniques = new HashSet<string>(questionCourante.options);
+        optionsUniques.Add(questionCourante.bonneReponse);
+
+        List<string> optionsMelangees = new List<string>(optionsUniques);
         optionsMelangees.Shuffle(); // Mélanger les réponses
 
         for (int i = 0; i < boutonsReponses.Length; i++)
         {
-            boutonsReponses[i].GetComponentInChildren<TextMeshProUGUI>().text = optionsMelangees[i]; // Mettre à jour le texte du bouton
-            boutonsReponses[i].onClick.RemoveAllListeners(); // Supprimer les anciens événements de clic
+            if (i < optionsMelangees.Count) // Vérifie qu'il y a assez d'options
+            {
+                boutonsReponses[i].GetComponentInChildren<TextMeshProUGUI>().text = optionsMelangees[i]; // Mettre à jour le texte du bouton
+                boutonsReponses[i].onClick.RemoveAllListeners(); // Supprimer les anciens événements de clic
 
-            // Vérifier si c'est la bonne réponse
-            bool estBonneReponse = optionsMelangees[i] == questionCourante.bonneReponse;
-            boutonsReponses[i].onClick.AddListener(() => VerifierReponse(estBonneReponse));
+                // Vérifier si c'est la bonne réponse
+                bool estBonneReponse = optionsMelangees[i] == questionCourante.bonneReponse;
+                boutonsReponses[i].onClick.AddListener(() => VerifierReponse(estBonneReponse));
+            }
+            else
+            {
+                boutonsReponses[i].gameObject.SetActive(false); // Masquer le bouton s'il n'y a pas assez d'options
+            }
         }
     }
+
 
     // Vérifier si la réponse sélectionnée est correcte
     void VerifierReponse(bool isCorrect)
