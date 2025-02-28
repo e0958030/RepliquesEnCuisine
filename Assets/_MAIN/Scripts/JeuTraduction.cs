@@ -16,6 +16,14 @@ public class JeuTraduction : MonoBehaviour
         public string[] options; // Choix de réponses
     }
 
+    //Variables de son sur clic des boutons
+    private AudioSource audioSource;
+
+    //Sons pour la bonne ou mauvaise réponse
+    public AudioClip sonMauvaiseReponse;
+    public AudioClip sonBonneReponse;
+    public AudioClip sonVictoire;
+
     //Variables pour désactiver le dialogue et activer le mini-jeu
     public GameObject dialogueUI; // Contiendra l'image et le dialogue
     public GameObject miniJeu; // Référence au GameObject du mini-jeu
@@ -33,10 +41,12 @@ public class JeuTraduction : MonoBehaviour
     private int questionsReussies = 0; // Compteur des questions réussies
     private TraductionQuestion questionCourante; // Stocke la question actuelle
 
-
     private Coroutine attenteCoroutine; // Stocker la coroutine pour pouvoir la stopper
     void Start()
     {
+        // Déclencher l'AudioSource sur ouverture du jeu
+        audioSource = GetComponent<AudioSource>();
+
         miniJeu.SetActive(false); // Désactiver le mini-jeu au début
         skipButton.onClick.AddListener(SauterDialogue); // Associer l'événement au bouton
         //StartCoroutine(AttendreEtLancerJeu()); // Lancer le compteur de 30 secondes, le dialogue et l'image se désactiveront à la fin et le quiz s'affichera
@@ -134,10 +144,18 @@ public class JeuTraduction : MonoBehaviour
         // Afficher le résultat avec la couleur appropriée
         reponseText.text = isCorrect ? bonneCouleur + "Bonne réponse !" + finCouleur : mauvaiseCouleur + "T'es pas sérieuse ..." + finCouleur;
 
+        //Si la réponse choisie est correcte 
         if (isCorrect)
         {
-            questionsReussies++;
+            questionsReussies++; //Incrémenter le compteur de bonnes réponses accumulées
+            audioSource.PlayOneShot(sonBonneReponse); //Jouer un son de rétroaction
             Invoke("ChargerQuestion", 1.5f); // Attendre 1.5 secondes avant la prochaine question
+        }
+
+        //Si la réponse n'est pas correcte
+        if (!isCorrect)
+        {
+            audioSource.PlayOneShot(sonMauvaiseReponse); //Jouer un son de rétroaction
         }
     }
 
@@ -155,6 +173,7 @@ public class JeuTraduction : MonoBehaviour
         }
 
         imageFin.gameObject.SetActive(true); //Une image de quiche s'affiche pour féliciter le joueur
+        audioSource.PlayOneShot(sonVictoire); //Jouer le son de victoire
         Invoke("ChargerSceneFin", 3f); // Attendre 3 secondes avant de changer de scène
     }
 
