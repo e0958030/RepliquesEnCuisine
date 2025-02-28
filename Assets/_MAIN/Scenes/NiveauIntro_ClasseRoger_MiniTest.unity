@@ -1154,7 +1154,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5345,10 +5345,10 @@ MonoBehaviour:
   reponseText: {fileID: 557543674}
   imageFin: {fileID: 2113558498}
   questions:
-  - phraseATraduire: "Translate : \xC9pinards"
+  - phraseATraduire: "Translate the following word : \xC9pinards"
     bonneReponse: Spinach
     options:
-    - Swiss chard
+    - Overcooked swiss chard
     - Spinach
     - Cauliflower
   - phraseATraduire: 'Translate the following: Put the quiche in the oven for 35
@@ -5364,6 +5364,20 @@ MonoBehaviour:
     - "500 degr\xE9s Celcius"
     - "Non, \xE7a ne va pas au four !"
     - "350 degr\xE9s Fahrenheit"
+  - phraseATraduire: What do you have to do in the 5th step?
+    bonneReponse: Pour the egg mixture on the cooked pie crust and add cheese on
+      top.
+    options:
+    - Throw everything in the trash.
+    - Add a mango and some paprika in the egg mixture.
+    - Pour the egg mixture on the cooked pie crust and add cheese on top.
+  - phraseATraduire: When you add the water to the pie dough, does it have to be
+      ice cold or hot?
+    bonneReponse: Ice cold
+    options:
+    - Boiling.
+    - Ice cold
+    - What? You should never add water to pie dough!
 --- !u!82 &2083792855
 AudioSource:
   m_ObjectHideFlags: 0
