@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Collections;
 
 public class JeuTraduction : MonoBehaviour
 {
@@ -15,21 +16,56 @@ public class JeuTraduction : MonoBehaviour
         public string[] options; // Choix de réponses
     }
 
+    //Variables pour désactiver le dialogue et activer le mini-jeu
+    public GameObject dialogueUI; // Contiendra l'image et le dialogue
+    public GameObject miniJeu; // Référence au GameObject du mini-jeu
+    public Button skipButton; // Bouton pour passer le dialogue
+
+    //Variables texte
     public TextMeshProUGUI questionTexte; // Texte qui affiche la question
     public Button[] boutonsReponses; // Il y aura à l'écran 3 boutons pour les choix de réponse.
     public TextMeshProUGUI reponseText; // Texte pour afficher le résultat de la question courante
     public Image imageFin; // Image à afficher à la fin du jeu
 
+    //Variables questions
     public TraductionQuestion[] questions; // Tableau contenant toutes les questions possibles (à définir dans l'inspecteur Unity)
     private List<int> questionsRestantes = new List<int>(); // Liste des indices de questions non posées
     private int questionsReussies = 0; // Compteur des questions réussies
     private TraductionQuestion questionCourante; // Stocke la question actuelle
 
+
+    private Coroutine attenteCoroutine; // Stocker la coroutine pour pouvoir la stopper
     void Start()
     {
+        miniJeu.SetActive(false); // Désactiver le mini-jeu au début
+        skipButton.onClick.AddListener(SauterDialogue); // Associer l'événement au bouton
+        //StartCoroutine(AttendreEtLancerJeu()); // Lancer le compteur de 30 secondes, le dialogue et l'image se désactiveront à la fin et le quiz s'affichera
+
+        IEnumerator AttendreEtLancerJeu()
+        {
+            yield return new WaitForSeconds(30f); // Attendre 30 secondes avant de désactiver le dialogue et la feuille d'instructions
+            LancerMiniJeu();
+        }
+
+        //Bouton pour sauter le dialogue sans avoir à attendre les 30 secondes
+        void SauterDialogue()
+        {
+            StopCoroutine(AttendreEtLancerJeu()); // Arrêter la coroutine si le joueur clique
+            LancerMiniJeu();
+        }
+
+        //Fonction pour désactiver les instructions et activer le canvas contenant le jeu
+        void LancerMiniJeu()
+        {
+            dialogueUI.SetActive(false); // Désactiver le dialogue et l'image
+            miniJeu.SetActive(true); // Activer le mini-jeu
+            skipButton.gameObject.SetActive(false); // Désactiver le bouton pour sauter les instructions
+        }
+
+        //Le mini jeu des questions
         if (questions == null || questions.Length == 0)
         {
-            Debug.LogError("Aucune question définie dans l'inspecteur.");
+            //Debug.LogError("Aucune question définie dans l'inspecteur.");
             return;
         }
         imageFin.gameObject.SetActive(false); // Cacher l'image de fin au début
@@ -42,7 +78,8 @@ public class JeuTraduction : MonoBehaviour
 
         ChargerQuestion(); // Charger une première question au démarrage
     }
-
+    
+    //Fonction qui va générer aléatoirement les questions et leurs choix de réponses définies dans l'inspecteur.
     void ChargerQuestion()
     {
         if (questionsRestantes.Count == 0)
@@ -53,13 +90,14 @@ public class JeuTraduction : MonoBehaviour
 
         int randomIndex = Random.Range(0, questionsRestantes.Count);
         int indexQuestionCourante = questionsRestantes[randomIndex];
-        questionsRestantes.RemoveAt(randomIndex); // Supprime la question de la liste
+        questionsRestantes.RemoveAt(randomIndex); // Supprime la question de la liste comme elle a été déjà répondue
         questionCourante = questions[indexQuestionCourante];
 
         questionTexte.text = questionCourante.phraseATraduire; // Afficher la phrase à traduire
         reponseText.text = ""; // Réinitialiser le texte du résultat
 
-        // Utiliser un HashSet pour garantir l'unicité des réponses
+        //Utiliser un HashSet pour s'assurer que les choix de réponse ne se répètent pas
+        //Collection C# qui trie les éléments d'une liste de manière non ordonnée afin d'éviter les répétitions.
         HashSet<string> optionsUniques = new HashSet<string>(questionCourante.options);
         optionsUniques.Add(questionCourante.bonneReponse);
 
@@ -91,7 +129,7 @@ public class JeuTraduction : MonoBehaviour
         // Définir les couleurs pour les réponses
         string bonneCouleur = "<color=green>"; // Couleur pour la bonne réponse (vert)
         string mauvaiseCouleur = "<color=red>"; // Couleur pour la mauvaise réponse (rouge)
-        string finCouleur = "</color>"; // Balise de fermeture de couleur
+        string finCouleur = "</color>"; 
 
         // Afficher le résultat avec la couleur appropriée
         reponseText.text = isCorrect ? bonneCouleur + "Bonne réponse !" + finCouleur : mauvaiseCouleur + "T'es pas sérieuse ..." + finCouleur;
