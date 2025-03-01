@@ -1152,7 +1152,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e47564630bb23434a8a6e6b3c1e4ec29, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2157,7 +2157,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8aaa7eae41065494a883174b12fa2df4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bd8951f2508e7614299b5dfd1b968b18, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -4220,7 +4220,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1ee39e552b704a542bc98d1fbe7e6f1b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ecc90e8454ac154a9f70f6b661a0e5e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5335,6 +5335,8 @@ MonoBehaviour:
   sonBonneReponse: {fileID: 8300000, guid: c16e9f240b51ea141aad4537e4187633, type: 3}
   sonVictoire: {fileID: 8300000, guid: 19db8a553724db24bb6ab263700e6e33, type: 3}
   sonBravo: {fileID: 8300000, guid: c5fc6b361074b444a8916fa4710a9ee1, type: 3}
+  sonBravoCestBienReussi: {fileID: 8300000, guid: d3945cd7dd651314ea8dcb336ddaffe2,
+    type: 3}
   sonRogerFache: {fileID: 8300000, guid: 63e4c5b2a7d443847a6feb52beb64c4e, type: 3}
   dialogueUI: {fileID: 1579254495}
   miniJeu: {fileID: 2083792849}
@@ -5357,21 +5359,22 @@ MonoBehaviour:
       minutes'
     bonneReponse: Mettre la quiche dans le four pendant 35 minutes.
     options:
-    - "Ouvrir le contenant de cr\xE8me et en boire le contenu."
+    - "Ouvrir le contenant de cr\xE8me et en boire 35 ml."
     - Faire frire les oeufs dans l'huile d'olive.
     - Mettre la quiche dans le four pendant 35 minutes.
-  - phraseATraduire: What is the oven's temperature for the quiche?
-    bonneReponse: "350 degr\xE9s Fahrenheit"
+  - phraseATraduire: "How would you read the temperature required to cook the quiche? 
+      (375\xB0F)"
+    bonneReponse: "Trois cent soixante-quinze degr\xE9s Fahrenheit"
     options:
-    - "500 degr\xE9s Celcius"
-    - "Non, \xE7a ne va pas au four !"
-    - "350 degr\xE9s Fahrenheit"
+    - "Non, \xE7a ne va pas au four ! Franchement."
+    - "Trois cent quarante douze degr\xE9s"
+    - "Trois cent soixante-quinze degr\xE9s Fahrenheit"
   - phraseATraduire: What do you have to do in the 5th step?
     bonneReponse: Pour the egg mixture on the cooked pie crust and add cheese on
       top.
     options:
     - Throw everything in the trash.
-    - Add a mango and some paprika in the egg mixture.
+    - Add a mango and chocolate in the egg mixture.
     - Pour the egg mixture on the cooked pie crust and add cheese on top.
   - phraseATraduire: When you add the water to the pie dough, does it have to be
       ice cold or hot?

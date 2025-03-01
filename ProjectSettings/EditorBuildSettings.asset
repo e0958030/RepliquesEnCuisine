@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/_MAIN/Scenes/NiveauIntro_ClasseRoger.unity
     guid: e61896c0dffd5b948b52781246decc29
   - enabled: 1
+    path: Assets/_MAIN/Scenes/NiveauIntro_ClasseEmber.unity
+    guid: 7bcb74928500a634593367343fba9558
+  - enabled: 1
     path: Assets/_MAIN/Scenes/NiveauIntro_ClasseRosemarie.unity
     guid: 31de24917ae85e84fafc532ba799064d
   - enabled: 1

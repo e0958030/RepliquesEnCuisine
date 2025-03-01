@@ -24,6 +24,7 @@ public class JeuTraduction : MonoBehaviour
     public AudioClip sonBonneReponse;
     public AudioClip sonVictoire;
     public AudioClip sonBravo;
+    public AudioClip sonBravoCestBienReussi;
     public AudioClip sonRogerFache;
 
     //Variables pour désactiver le dialogue et activer le mini-jeu
@@ -169,7 +170,7 @@ public class JeuTraduction : MonoBehaviour
     {
         questionTexte.text = "Bravo ! C'est bien réussi !";
         reponseText.text = "";
-        audioSource.PlayOneShot(sonBravo); //Jouer un message de félicitations
+        audioSource.PlayOneShot(sonBravoCestBienReussi); //Jouer un message de félicitations
 
         // Désactiver tous les boutons de choix de réponses
         foreach (var bouton in boutonsReponses)
