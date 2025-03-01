@@ -23,6 +23,8 @@ public class JeuTraduction : MonoBehaviour
     public AudioClip sonMauvaiseReponse;
     public AudioClip sonBonneReponse;
     public AudioClip sonVictoire;
+    public AudioClip sonBravo;
+    public AudioClip sonRogerFache;
 
     //Variables pour désactiver le dialogue et activer le mini-jeu
     public GameObject dialogueUI; // Contiendra l'image et le dialogue
@@ -142,13 +144,14 @@ public class JeuTraduction : MonoBehaviour
         string finCouleur = "</color>"; 
 
         // Afficher le résultat avec la couleur appropriée
-        reponseText.text = isCorrect ? bonneCouleur + "Bonne réponse !" + finCouleur : mauvaiseCouleur + "T'es pas sérieuse ..." + finCouleur;
+        reponseText.text = isCorrect ? bonneCouleur + "Bonne réponse !" + finCouleur : mauvaiseCouleur + "Non, mais tu rigoles ?" + finCouleur;
 
         //Si la réponse choisie est correcte 
         if (isCorrect)
         {
             questionsReussies++; //Incrémenter le compteur de bonnes réponses accumulées
             audioSource.PlayOneShot(sonBonneReponse); //Jouer un son de rétroaction
+            audioSource.PlayOneShot(sonBravo); //Jouer un son de rétroaction
             Invoke("ChargerQuestion", 1.5f); // Attendre 1.5 secondes avant la prochaine question
         }
 
@@ -156,6 +159,7 @@ public class JeuTraduction : MonoBehaviour
         if (!isCorrect)
         {
             audioSource.PlayOneShot(sonMauvaiseReponse); //Jouer un son de rétroaction
+            audioSource.PlayOneShot(sonRogerFache); //Jouer un son de rétroaction
         }
     }
 
@@ -165,6 +169,7 @@ public class JeuTraduction : MonoBehaviour
     {
         questionTexte.text = "Bravo ! C'est bien réussi !";
         reponseText.text = "";
+        audioSource.PlayOneShot(sonBravo); //Jouer un message de félicitations
 
         // Désactiver tous les boutons de choix de réponses
         foreach (var bouton in boutonsReponses)

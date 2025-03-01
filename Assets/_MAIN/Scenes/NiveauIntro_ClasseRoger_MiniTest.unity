@@ -1152,7 +1152,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e47564630bb23434a8a6e6b3c1e4ec29, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2157,7 +2157,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8aaa7eae41065494a883174b12fa2df4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5334,6 +5334,8 @@ MonoBehaviour:
   sonMauvaiseReponse: {fileID: 8300000, guid: c6826e2abaf6a184ea64cdb56c2d78a9, type: 3}
   sonBonneReponse: {fileID: 8300000, guid: c16e9f240b51ea141aad4537e4187633, type: 3}
   sonVictoire: {fileID: 8300000, guid: 19db8a553724db24bb6ab263700e6e33, type: 3}
+  sonBravo: {fileID: 8300000, guid: c5fc6b361074b444a8916fa4710a9ee1, type: 3}
+  sonRogerFache: {fileID: 8300000, guid: 63e4c5b2a7d443847a6feb52beb64c4e, type: 3}
   dialogueUI: {fileID: 1579254495}
   miniJeu: {fileID: 2083792849}
   skipButton: {fileID: 1142987909}
