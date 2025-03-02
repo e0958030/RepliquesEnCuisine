@@ -5432,7 +5432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageNoire: {fileID: 724735224}
   messageMissionTerminee: {fileID: 0}
-  dureeFondu: 3
+  dureeFondu: 2
   delaiAvantFondu: 2
 --- !u!4 &1994999601
 Transform:
