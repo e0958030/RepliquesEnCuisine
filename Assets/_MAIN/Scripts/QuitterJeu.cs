@@ -3,7 +3,9 @@ using UnityEngine.UI; // Nécessaire si vous manipulez des composants UI
 
 public class QuitterJeu : MonoBehaviour
 {
-    // Si vous souhaitez lier le bouton via l'inspecteur
+    //Script pour quitter l'application lorsque le jeu est terminé.
+
+    //Bouton qui gère la fin du jeu
     public Button quitButton;
 
     void Start()
@@ -18,6 +20,7 @@ public class QuitterJeu : MonoBehaviour
 
     void Update()
     {
+        //Le joueur peut aussi quitter le jeu en appuyant sur la touche d'échappement 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Quit();

@@ -127,7 +127,7 @@ public class SelectionObjetEpicerie : MonoBehaviour
                     }
                     else
                     {
-                        // Les objets mauvais ne sont pas détruits mais jouent un son
+                        // Les objets mauvais ne sont pas détruits mais jouent un son pour aviser le joueur qu'il s'est trompé
                         if (sonMauvaisItem != null)
                         {
                             audioSource.PlayOneShot(sonMauvaisItem);

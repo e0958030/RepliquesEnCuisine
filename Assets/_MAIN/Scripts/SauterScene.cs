@@ -19,6 +19,7 @@ public class SauterScene : MonoBehaviour
         StartCoroutine(FonduEntree());
     }
 
+    //Lorsque le joueur appuie sur la touche d'espacement, la scène suivante se charge avec un effet de fondu noir progressif géré dans la coroutine plus bas
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
