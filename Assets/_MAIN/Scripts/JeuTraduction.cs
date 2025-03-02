@@ -181,6 +181,7 @@ public class JeuTraduction : MonoBehaviour
         imageFin.gameObject.SetActive(true); //Une image de quiche s'affiche pour féliciter le joueur
         audioSource.PlayOneShot(sonVictoire); //Jouer le son de victoire
         Invoke("ChargerSceneFin", 3f); // Attendre 3 secondes avant de changer de scène
+        FindObjectOfType<FonduTransition>()?.AfficherMessageEtChargerScene("FinJeu");//Appeler le script de fondu transition
     }
 
     // Charger la scène de fin

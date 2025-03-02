@@ -2507,9 +2507,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7516068555eed242ba814dc6333834e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomScene: NiveauIntro_MapVille
+  nomScene: NiveauIntro_Appart
   fonduNoir: {fileID: 292977553}
-  dureeFondu: 1
+  dureeFondu: 2
 --- !u!1 &1503970963
 GameObject:
   m_ObjectHideFlags: 0

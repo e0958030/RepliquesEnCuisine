@@ -12,6 +12,7 @@ public class SelectionObjetEpicerie : MonoBehaviour
     // Sons pour bon ou mauvais
     public AudioClip sonMauvaisItem;
     public AudioClip sonBonItem;
+    public AudioClip jeuTermine;
 
     // Items de la liste d'épicerie
     public AudioClip sonEpinards;
@@ -120,6 +121,7 @@ public class SelectionObjetEpicerie : MonoBehaviour
                         // Vérifie si tous les bons ingrédients sont ramassés et charge la scène suivante
                         if (bonsIngredientsRamasses >= totalBonsIngredients)
                         {
+                            audioSource.PlayOneShot(jeuTermine); // Joue le son de victoire
                             ChargerSceneClasse();
                         }
                     }
@@ -160,6 +162,7 @@ public class SelectionObjetEpicerie : MonoBehaviour
     void ChargerSceneClasse()
     {
         Debug.Log("Tous les bons ingrédients ont été ramassés.");
-        SceneManager.LoadScene("NiveauIntro_ClasseRoger_MiniTest");
+        //Faire appel au script de FonduTransition.cs afin de charger la scène avec un fondu noir et éviter une coupure brusque
+        FindObjectOfType<FonduTransition>().AfficherMessageEtChargerScene("NiveauIntro_ClasseRoger_MiniTest");
     }
 }
